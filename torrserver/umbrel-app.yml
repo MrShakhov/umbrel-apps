@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: torrserver
+category: networking
+name: TorrServer
+version: "MatriX.132"
+tagline: Simple and powerful tool for streaming torrents
+description: >-
+  TorrServer is a program that allows users to view torrents online without the need for preliminary file downloading. The core functionality of TorrServer includes caching torrents and subsequent data transfer via the HTTP protocol, allowing the cache size to be adjusted according to the system parameters and the user's internet connection speed.
+releaseNotes: >-
+  Quick fix for a critical bug
+developer: YouROK
+website: https://github.com/YouROK/TorrServer
+dependencies: []
+repo: https://github.com/YouROK/TorrServer
+support: https://github.com/YouROK/TorrServer/issues
+port: 8090
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: Alfred Shakhov
+submission: ""

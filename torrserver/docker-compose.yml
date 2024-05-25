@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: torrserver_web_1
+      APP_PORT: 8090
+      PROXY_AUTH_ADD: false
+
+  web:
+    image: ghcr.io/yourok/torrserver:matrix.132@sha256:d17bb9fda1d9a00758ff2940c225c5dd70e36201e79abc2feec3a5f6c74de25a
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+     - ${APP_DATA_DIR}/CACHE:/opt/ts/torrents
+     - ${APP_DATA_DIR}/CONFIG:/opt/ts/config
+    environment:
+      - TS_HTTPAUTH=0
+      - TS_TORR_DIR=/opt/ts/torrents
+      - TS_CONF_PATH=/opt/ts/config
